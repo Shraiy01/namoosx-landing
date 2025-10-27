@@ -7,6 +7,7 @@ const Footer = () => {
       country: "UAE",
       address: "Namoosx AI Services LLC\nPO Box 1234, Abu Dhabi, United Arab Emirates"
     },
+    
     {
       country: "United Kingdom", 
       address: "Namoosx AI Services LLC\n22 Brook St, Mayfair, London W1K 5DF, United Kingdom"
