@@ -5,7 +5,8 @@ import industryImage from '../assets/images/industry.jpg';
 import healthcareImage from '../assets/images/healthcare.png';
 import aeroplaneImage from '../assets/images/aeroplane.jpg';
 import realestateImage from '../assets/images/realestate.jpg';
-import businessImage from '../assets/images/buisness.png';
+// import businessImage from '../assets/images/buisness.png';
+import gamingImage from '../assets/images/gaming.jpg';
 
 const Industries = () => {
   const ref = useRef(null);
@@ -44,7 +45,7 @@ const Industries = () => {
       title: "Gaming",
       subtitle: "Where Intelligence Meets Immersion.",
       description: "We power next-gen gaming ecosystems through AI-driven personalization, Web3 asset ownership, and secure digital economies.",
-      image: businessImage
+      image: gamingImage
     }
   ];
 

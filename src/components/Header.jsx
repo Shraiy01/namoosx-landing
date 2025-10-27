@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Logo from '../assets/images/Logo_2nd-1536x305 1.svg';
+import Logo from '../assets/images/1.svg';
 import bgImage from '../assets/images/bgImage.jpg';
 
 const Header = () => {
@@ -46,7 +46,7 @@ const Header = () => {
             <img 
               src={Logo} 
               alt="Namoosx Logo" 
-              className="h-6 sm:h-7 lg:h-8 w-auto"
+              className="h-auto w-[155px]"
             />
           </motion.div>
 

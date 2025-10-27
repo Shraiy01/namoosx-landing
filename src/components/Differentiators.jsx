@@ -2,6 +2,11 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import whatMakesImage from '../assets/images/whatMakes.png';
+import ai from '../assets/images/ai.svg';
+import blockchain from '../assets/images/block.svg';
+import cybersecurity from '../assets/images/cybersecurity.svg';
+import automation from '../assets/images/automation.svg';
+import innovation from '../assets/images/innovation.svg';
 
 const Differentiators = () => {
   const ref = useRef(null);
@@ -15,27 +20,27 @@ const Differentiators = () => {
     {
       title: "AI & Intelligent Systems",
       description: "Transform data into intelligent, real-time business decisions.",
-      icon: "🧠"
+      icon: ai
     },
     {
       title: "Blockchain & Web3 Architecture",
       description: "Build transparent, decentralized, and scalable digital ecosystems.",
-      icon: "⛓️"
+      icon: blockchain
     },
     {
       title: "Cybersecurity & Digital Trust",
       description: "Protect businesses with zero-trust and blockchain-secure defense.",
-      icon: "🛡️"
+      icon: cybersecurity
     },
     {
       title: "Automation & Scalable Growth",
       description: "Simplify operations through smart, adaptive automation.",
-      icon: "⚙️"
+      icon: automation
     },
     {
       title: "Strategic Innovation & Advisory",
       description: "Bridge deep tech with long-term business impact.",
-      icon: "💡"
+      icon: innovation
     }
   ];
 
@@ -86,14 +91,18 @@ const Differentiators = () => {
                   whileHover={{ x: 10 }}
                   className="flex items-start transition-colors cursor-pointer bg-card-bg rounded-[12px] pt-3 sm:pt-4 lg:pt-[18px] px-3 sm:px-4 pb-3 sm:pb-4 lg:pb-[18px] gap-2 sm:gap-3 lg:gap-[10px]"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center text-lg sm:text-xl lg:text-2xl flex-shrink-0">
-                    {feature.icon}
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl lg:text-2xl flex-shrink-0">
+                    <img
+                      src={feature.icon}
+                      alt={`${feature.title} icon`}
+                      className="w-[52px] h-[52px] sm:w-[52px] sm:h-[52px] object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-white mb-1 sm:mb-2">
                       {feature.title}
                     </h3>
-                    <p className="leading-relaxed font-lexend font-light text-xs sm:text-sm leading-[100%] tracking-[0%] text-text-muted">
+                    <p className="font-lexend font-light text-xs sm:text-sm leading-[100%] tracking-[0%] text-text-muted">
                       {feature.description}
                     </p>
                   </div>

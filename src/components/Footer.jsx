@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Logo from '../assets/images/Logo_2nd-1536x305 1.svg';
+import Logo from '../assets/images/1.svg';
 
 const Footer = () => {
   const locations = [
@@ -12,7 +12,7 @@ const Footer = () => {
       country: "United Kingdom", 
       address: "Namoosx AI Services LLC\n22 Brook St, Mayfair, London W1K 5DF, United Kingdom"
     },
-    
+
     {
       country: "India",
       address: "Namoosx AI Services LLC\nOffice T05, Plot no B10, Sector 2\nNoida, Uttarpradesh India"
@@ -26,61 +26,66 @@ const Footer = () => {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Logo and Tagline */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <img 
-              src={Logo} 
-              alt="Namoosx Logo" 
-              className="h-8 w-auto"
-            />
-            {/* <span className="text-2xl font-bold text-white">Namoosx</span> */}
-          </div>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Pioneering the Future with AI, Web3, Blockchain, and Cybersecurity. 
-            Innovating at the Edge of Possibility.
-          </p>
-        </motion.div>
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[152px] items-center">
+            {/* Left: Logo + Tagline */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center md:text-left"
+            >
+              <div className="flex items-center justify-center md:justify-start space-x-2">
+                <img 
+                  src={Logo} 
+                  alt="Namoosx Logo" 
+                  className="h-auto w-[215px]"
+                />
+              </div>
+              <p className="text-gray-300 max-w-2xl md:max-w-none mx-auto md:mx-0">
+                Pioneering the Future with AI, Web3, Blockchain, and Cybersecurity. 
+                Innovating at the Edge of Possibility.
+              </p>
+            </motion.div>
 
-        {/* Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
-        >
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">About Namoosx</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Vision & Leadership</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
-            </ul>
+            {/* Right: Links (menu) */}
+            <div className="flex justify-center md:justify-end items-start">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-2xl md:max-w-none"
+              >
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">About Namoosx</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Vision & Leadership</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Privacy Policy</a></li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">R & D partnership</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Contact Us</a></li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-4">Solutions</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">AI & Automation</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Blockchain & Web3</a></li>
+                    <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Data & Intelligence</a></li>
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">R & D partnership</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Solutions</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">AI & Automation</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Blockchain & Web3</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Data & Intelligence</a></li>
-            </ul>
-          </div>
-        </motion.div>
+        </div>
 
         {/* Global Locations */}
         <motion.div
