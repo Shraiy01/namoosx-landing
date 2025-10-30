@@ -62,8 +62,8 @@ const Strategy = () => {
                 delay: index * 0.2, 
                 ease: [0.25, 0.46, 0.45, 0.94] 
               }}
-              whileHover={{ y: -5 }}
-              className="group relative"
+              whileHover={{ y: -6, scale: 1.02, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+              className="group relative transform-gpu will-change-transform"
             >
               <div className="h-full">
                 {/* Strategy Image */}

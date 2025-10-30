@@ -88,8 +88,8 @@ const Differentiators = () => {
                     delay: 0.4 + index * 0.15, 
                     ease: [0.25, 0.46, 0.45, 0.94] 
                   }}
-                  whileHover={{ x: 10 }}
-                  className="flex items-start transition-colors cursor-pointer bg-card-bg rounded-[12px] pt-3 sm:pt-4 lg:pt-[18px] px-3 sm:px-4 pb-3 sm:pb-4 lg:pb-[18px] gap-2 sm:gap-3 lg:gap-[10px]"
+                  whileHover={{ x: 10, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+                  className="flex items-start transition-colors cursor-pointer bg-card-bg rounded-[12px] pt-3 sm:pt-4 lg:pt-[18px] px-3 sm:px-4 pb-3 sm:pb-4 lg:pb-[18px] gap-2 sm:gap-3 lg:gap-[10px] transform-gpu will-change-transform"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-lg sm:text-xl lg:text-2xl flex-shrink-0">
                     <img

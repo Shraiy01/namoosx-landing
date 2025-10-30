@@ -54,8 +54,8 @@ const Quality = () => {
                 delay: index * 0.15, 
                 ease: [0.25, 0.46, 0.45, 0.94] 
               }}
-              whileHover={{ y: -5 }}
-              className="p-6 transition-all duration-300 bg-quality-bg rounded-lg"
+              whileHover={{ y: -6, scale: 1.02, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+              className="p-6 transition-all duration-300 bg-quality-bg rounded-lg transform-gpu will-change-transform"
             >
               <h3 className="text-xl font-semibold text-white mb-3">
                 {item.title}

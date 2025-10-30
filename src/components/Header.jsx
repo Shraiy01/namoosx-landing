@@ -40,8 +40,8 @@ const Header = () => {
         <div className="flex items-center justify-between w-full h-[80px] sm:h-[90px] lg:h-[100px] pt-4 sm:pt-5 lg:pt-6 pb-4 sm:pb-5 lg:pb-6">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center"
+            whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+            className="flex items-center transform-gpu will-change-transform"
           >
             <img 
               src={Logo} 
@@ -94,9 +94,9 @@ const Header = () => {
 
           {/* Desktop CTA Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
             whileTap={{ scale: 0.95 }}
-            className="hidden lg:block text-white font-medium transition-colors h-[40px] sm:h-[45px] lg:h-[50px] gap-[10px] opacity-100 py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-[100px] bg-custom-blue text-[12px] sm:text-[13px] lg:text-[14px]"
+            className="hidden lg:block text-white font-medium transition-colors h-[40px] sm:h-[45px] lg:h-[50px] gap-[10px] opacity-100 py-2 sm:py-3 lg:py-4 px-4 sm:px-6 lg:px-8 rounded-[100px] bg-custom-blue text-[12px] sm:text-[13px] lg:text-[14px] transform-gpu will-change-transform"
           >
             Let's Build Together
           </motion.button>
@@ -153,10 +153,10 @@ const Header = () => {
               
               {/* Mobile CTA Button */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full text-white font-medium transition-colors h-[50px] py-4 px-8 rounded-[100px] bg-custom-blue mt-4"
+                className="w-full text-white font-medium transition-colors h-[50px] py-4 px-8 rounded-[100px] bg-custom-blue mt-4 transform-gpu will-change-transform"
               >
                 Let's Build Together
               </motion.button>

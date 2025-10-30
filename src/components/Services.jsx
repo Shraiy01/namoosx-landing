@@ -90,8 +90,8 @@ const Services = () => {
                 delay: index * 0.15, 
                 ease: [0.25, 0.46, 0.45, 0.94] 
               }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className={`relative p-6 rounded-xl border transition-all duration-300 ${
+              whileHover={{ y: -6, scale: 1.03, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+              className={`relative p-6 rounded-xl border transition-all duration-300 ease-out transform-gpu will-change-transform ${
                 service.title === "View All" 
                   ? "bg-primary/10 border-primary/30 hover:border-primary/50" 
                   : "bg-white/5 border-white/10 hover:border-primary/30 hover:bg-white/10"

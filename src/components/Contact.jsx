@@ -145,12 +145,12 @@ const Contact = () => {
           >
             <motion.button
               onClick={handleSubmit}
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.02, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-primary rounded-lg p-6 text-center cursor-pointer transition-all duration-300 hover:bg-primary/90"
+              className="w-full bg-primary rounded-lg p-6 text-center cursor-pointer transition-all duration-300 hover:bg-primary/90 transform-gpu will-change-transform"
             >
               <p className="text-lg text-white font-lexend font-light">
-                Contact us for a consultation on enterprise AI, cloud AI & edge AI development
+                Contact us to build intelligent, secure, and decentralized systems with Namoosx.
               </p>
             </motion.button>
           </motion.div>

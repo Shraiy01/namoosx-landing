@@ -74,8 +74,8 @@ const Industries = () => {
                 delay: index * 0.15, 
                 ease: [0.25, 0.46, 0.45, 0.94] 
               }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300"
+              whileHover={{ y: -6, scale: 1.03, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-150 transform-gpu will-change-transform"
             >
               {/* Background particles */}
               <div className="absolute inset-0 overflow-hidden rounded-xl">
@@ -90,7 +90,7 @@ const Industries = () => {
                   <img 
                     src={industry.image} 
                     alt={industry.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-200 ease-out group-hover:scale-105"
                   />
                 </div>
 
@@ -125,8 +125,8 @@ const Industries = () => {
               delay: 0.5, 
               ease: [0.25, 0.46, 0.45, 0.94] 
             }}
-            whileHover={{ y: -5, scale: 1.02 }}
-            className="group relative bg-primary/10 border border-primary/30 rounded-xl p-6 hover:bg-primary/20 transition-all duration-300"
+            whileHover={{ y: -6, scale: 1.03, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
+            className="group relative bg-primary/10 border border-primary/30 rounded-xl p-6 hover:bg-primary/20 transition-all duration-150 transform-gpu will-change-transform"
           >
             <div className="flex flex-col items-center justify-center h-full text-center">
               <div className="w-16 h-16 bg-primary/30 rounded-lg flex items-center justify-center text-3xl mb-4 group-hover:bg-primary/40 transition-colors">

@@ -83,9 +83,9 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.05, transition: { type: 'spring', stiffness: 200, damping: 24 } }}
                   whileTap={{ scale: 0.95 }}
-                  className="relative h-[40px] sm:h-[45px] lg:h-[50px] px-[2px] py-[2px] rounded-[100px] font-semibold text-[12px] sm:text-[13px] lg:text-[14px] text-white overflow-hidden"
+                  className="relative h-[40px] sm:h-[45px] lg:h-[50px] px-[2px] py-[2px] rounded-[100px] font-semibold text-[12px] sm:text-[13px] lg:text-[14px] text-white overflow-hidden transform-gpu will-change-transform"
                   style={{
                     background:
                       "linear-gradient(92.96deg, rgba(255, 255, 255, 0.2) 0.1%, #FFFFFF 50%, rgba(255, 255, 255, 0.2) 99.9%)",

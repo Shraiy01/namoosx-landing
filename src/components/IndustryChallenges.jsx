@@ -75,7 +75,7 @@ const IndustryChallenges = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+        <div className="space-y-8 sm:space-y-10 lg:space-y-12">
           {industries.map((industry, index) => (
             <motion.div
               key={index}
